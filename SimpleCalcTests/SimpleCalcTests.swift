@@ -19,6 +19,15 @@ class ExtendedCalcTests :XCTestCase {
         XCTAssert(calc.calculate(["-1", "-2", "-3", "-4", "-5", "avg"]) == -3)
         // Newly added tests end
     }
+    
+    // Newly added tests for float numbers
+//    func testFloatOps() {
+//        XCTAssert(calc.calculate(["1.6", "+", "2.6"]) == 4.2)
+//        XCTAssert(calc.calculate(["2", "*", "2.4"]) == 4.8)
+//        XCTAssert(calc.calculate(["1.2", "/", "2"]) == 0.6)
+//        XCTAssert(calc.calculate(["1.5", "2.5", "3.5", "4.5", "5.5", "avg"]) == 3.5)
+//    }
+    // Newly added tests for float numbers end
 }
 
 class SimpleCalcTests: XCTestCase {
