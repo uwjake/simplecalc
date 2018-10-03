@@ -8,19 +8,17 @@
 
 import Foundation
 
-enum InputError: Error {
-    case invalid(String)
-    case tooShort
-}
-
 public class Calculator {
     public func calculate(_ args: [String]) -> Int {
+        // calBasic includes +, -, *, /, %
+        // calAdvanced includes avg, count, fact
         let opTest = Int(args[args.count-1])
         if opTest == nil{
             let op = args[args.count-1]
             var nums = args
             nums.removeLast()
             let numbers = nums.map {(string:String)-> Int in return Int(string)!}
+            
             return calAdvanced(numbers: numbers, op: op)
         } else{
             let op = args[1]
@@ -29,8 +27,6 @@ public class Calculator {
             
             return calcBasic(n1: n1, n2: n2, op: op)
         }
-        
-        
     }
     
     public func calAdvanced(numbers:[Int], op:String) -> Int{
